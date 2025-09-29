@@ -21,7 +21,7 @@ public class AlunoController {
         return "Aluno Adicionado: " + nome;
     }
 
-    @PutMapping("/id")
+    @PutMapping("/{id}")
     public String atualizarAluno(@PathVariable int id, @RequestBody String novoNome) {
         if (id >= 0 && id < alunos.size()) {
             alunos.set(id,novoNome);
